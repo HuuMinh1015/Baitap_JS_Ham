@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>JS_Ham</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- bài tập 1: quản lý tuyển sinh  -->
+    <section class="mx-auto w-50 py-5">
+        <h1>Bài 1: Quản lý tuyển sinh</h1>
+        <div class="form-group">
+          <label for="Dchuan-input">Điểm chuẩn</label>
+          <input id="Dchuan-input" class="form-control" type="text" name="" placeholder="0" />
+    
+          <label for="D1-input">Môn 1</label>
+          <input id="D1-input" class="form-control" type="text" name="" placeholder="0" />
+    
+          <label for="D2-input">Môn 2</label>
+          <input id="D2-input" class="form-control" type="text" name="" placeholder="0" />
+    
+          <label for="D3-input">Môn 3</label>
+          <input id="D3-input" class="form-control" type="text" name="" placeholder="0" />
+    
+          <label for="kv-input">Khu vực</label>
+          <select class="form-control" name="kv-input" id="kv-input">
+            <option value="None">Không có</option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+          </select>
+    
+          <label for="dt-input">Đối tượng</label>
+          <select class="form-control" name="dt-input" id="dt-input">
+            <option value="None">Không có</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+        </div>
+        <div id="tsResult"></div>
+        <button class="tsButton" onclick="xetTuyenSinh()">Xét Duyệt</button>
+      </section>
+    
+
+    <hr>
+    <hr>
+    <!-- Bài tập 2 -->
+    <h1>Bài 2: Tính tiền điện</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">Tính tiền điện</div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label for="">Nhập họ tên</label>
+                            <input id="nhapHoTen" type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Nhập số Kw</label>
+                            <input id="nhapSoKw" type="text" class="form-control">
+                        </div>
+                        <button class="btn btn-success" onclick="tienDien()">Tính tiền điện</button>
+                    </div>
+                    <div id="footerTinhTienDien" class="card-footer text-muted"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <hr>
+    <!-- Bài tập 3 -->
+    <h1>Bài 3: Tính tiền thuế cá nhân</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">Tính thuế thu nhập cá nhân</div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label for="">Nhập họ tên</label>
+                            <input id="nhapHoTenCaNhan" type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Tổng thu nhập năm</label>
+                            <input id="tongThuNhapNam" type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Số người phụ thuộc</label>
+                            <input id="soNguoiPhuThuoc" type="text" class="form-control">
+                        </div>
+                        <button class="btn btn-success" onclick="tienThue()">Tính tiền thuế</button>
+                    </div>
+                    <div id="footerTienThue" class="card-footer text-muted"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <hr>
+    <!-- Bài tập 4 -->
+    <section class="mx-auto w-50 py-5">
+        <h1>Bài 4: Tính tiền cáp</h1>
+        <div class="form-group">
+          <label for="B4name-input">MÃ KHÁCH HÀNG</label>
+          <input id="B4name-input" class="form-control" type="text" name="" placeholder="Tên" />
+    
+          <label for="type-khach">Loại khách hàng</label>
+          <select class="form-control" name="kv-input" id="type-khach">
+            <option value="nhadan">Nhà Dân</option>
+            <option value="kinhdoanh">Kinh Doanh</option>
+          </select>
+    
+          <label id="ketnoi-label" for="ketnoi-input">Số kết nối</label>
+          <input id="ketnoi-input" class="form-control" type="text" name="" placeholder="0" />
+    
+          <label for="kenhcaocap-input">Số kênh cao cấp</label>
+          <input id="kenhcaocap-input" class="form-control" type="text" name="" placeholder="0" />
+        </div>
+        <div id="b4Result"></div>
+        <button class="b4Button" onclick="tienCap() ">Tính tiền cáp</button>
+      </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>
